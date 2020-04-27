@@ -9,6 +9,7 @@ class BookAddForm(forms.ModelForm):
             'title',
             'author',
             'review',
+            'image',
             
 
 
