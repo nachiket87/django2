@@ -5,7 +5,9 @@
         {% for title in latest_books %}
             <!--<li> <a href="booklog/{{ title.id }}/"> {{ title.title }}</a>-->
             <li> <a href="{% url 'books-detail' title.id %}"> {{ title.title }}</a>   
-               By: {{ title.author }}<br><br>
+               By: {{ title.author }}
+               <br><br>
+               
             </li>
         {% endfor %}
         </ul>
