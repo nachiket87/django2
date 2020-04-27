@@ -1,0 +1,13 @@
+{% extends "booklog/base.html" %}
+{% block content %}
+    {% if latest_books %}
+        <ul>
+        {% for title in latest_books %}
+            <li> <a href="booklog/{{ title.title }}/"> {{ title.title }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+            <p>No books are available.</p>
+    {% endif %}
+{% endblock content %}
+
