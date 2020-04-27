@@ -1,9 +1,14 @@
 
 {% extends "booklog/base.html" %}
+{% load crispy_forms_tags %}
 {% block content %}
-    <form method = 'POST'> {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value='Save' />
-    </form>
+    <div class="conent-section">
+        <form method = 'POST'> {% csrf_token %}
+            <fieldset class="form-group">
+            {{ form|crispy }}
+            </fieldset>
+            <input type="submit" value='Save' />
+        </form>
+    </div>
 {% endblock content %}
 
