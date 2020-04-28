@@ -13,3 +13,13 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        
+        img = Image.open(self.image.path) 
+        
+        if img.height > 333 or img.width > 220:
+            output_size = (333, 220)
+            img.thumbnail(output_size)
+            img.save(self.image.path)

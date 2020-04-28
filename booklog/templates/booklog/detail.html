@@ -3,5 +3,7 @@
 {% block content %}
     <h1>{{ latest_books.title }}</h1>
     <h2> By: {{ latest_books.author }}</h2>
-    
+    <div class = "media">
+        <img class="img-thumbnail" src="{{ latest_books.image.url }}"> 
+    </div>
 {% endblock content %}
