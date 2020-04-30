@@ -19,7 +19,7 @@ class Book(models.Model):
         
         img = Image.open(self.image.path) 
         
-        if img.height > 333 or img.width > 220:
-            output_size = (333, 220)
+        if img.height > 400 or img.width > 320:
+            output_size = (220, 333)
             img.thumbnail(output_size)
             img.save(self.image.path)
