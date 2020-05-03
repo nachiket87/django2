@@ -9,7 +9,7 @@ class Book(models.Model):
     review_type = models.TextChoices('ReviewType', 'Good Bad Terrible')
     image = models.ImageField(default='default.jpg', upload_to='book_profile')
     review = models.CharField(blank=False, choices=review_type.choices, max_length=10)
-    poster = models.ForeignKey(User, on_delete=models.CASCADE)
+    
     
     
 
